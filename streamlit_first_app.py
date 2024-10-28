@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import pickle
 
 # Load dataset
-data_path ="C:\\Users\\Vijeta Priya\\OneDrive\\Desktop\\water_potability.csv"
+data_path ="water_potability.csv"
 data = pd.read_csv(data_path)
 
 # Preprocess data

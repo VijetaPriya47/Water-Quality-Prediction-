@@ -31,16 +31,16 @@ def parameter_info():
 st.title("Water Potability Prediction")
 st.write("Enter water quality parameters to check if the water is safe to drink:")
 
-# Collect user input for each parameter
-pH = st.number_input("pH (6.5-8.5 is ideal)", min_value=0.0, max_value=14.0, value=7.0, step=0.1)
-hardness = st.number_input("Hardness (mg/L)", min_value=0.0, max_value=500.0, value=150.0, step=1.0)
-solids = st.number_input("Total Dissolved Solids (ppm)", min_value=0.0, max_value=5000.0, value=500.0, step=1.0)
-chloramines = st.number_input("Chloramines (ppm)", min_value=0.0, max_value=10.0, value=4.0, step=0.1)
-sulfate = st.number_input("Sulfate (mg/L)", min_value=0.0, max_value=500.0, value=250.0, step=1.0)
-conductivity = st.number_input("Conductivity (μS/cm)", min_value=0.0, max_value=1000.0, value=300.0, step=1.0)
-organic_carbon = st.number_input("Organic Carbon (ppm)", min_value=0.0, max_value=20.0, value=10.0, step=0.1)
-trihalomethanes = st.number_input("Trihalomethanes (μg/L)", min_value=0.0, max_value=200.0, value=50.0, step=1.0)
-turbidity = st.number_input("Turbidity (NTU)", min_value=0.0, max_value=10.0, value=3.0, step=0.1)
+# Set default values to likely safe ranges
+pH = st.number_input("pH (6.5-8.5 is ideal)", min_value=0.0, max_value=14.0, value=7.5, step=0.1)
+hardness = st.number_input("Hardness (mg/L)", min_value=0.0, max_value=500.0, value=120.0, step=1.0)
+solids = st.number_input("Total Dissolved Solids (ppm)", min_value=0.0, max_value=5000.0, value=250.0, step=1.0)
+chloramines = st.number_input("Chloramines (ppm)", min_value=0.0, max_value=10.0, value=2.0, step=0.1)
+sulfate = st.number_input("Sulfate (mg/L)", min_value=0.0, max_value=500.0, value=180.0, step=1.0)
+conductivity = st.number_input("Conductivity (μS/cm)", min_value=0.0, max_value=1000.0, value=400.0, step=1.0)
+organic_carbon = st.number_input("Organic Carbon (ppm)", min_value=0.0, max_value=20.0, value=5.0, step=0.1)
+trihalomethanes = st.number_input("Trihalomethanes (μg/L)", min_value=0.0, max_value=200.0, value=40.0, step=1.0)
+turbidity = st.number_input("Turbidity (NTU)", min_value=0.0, max_value=10.0, value=2.0, step=0.1)
 
 # Predict potability when user clicks the button
 if st.button("Check Potability"):

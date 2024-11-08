@@ -52,8 +52,8 @@ st.markdown("""
     **This app** leverages data and machine learning to analyze various water characteristics, helping predict if water is safe for consumption. Each parameter tells us a unique story about water quality, offering valuable insights into water's suitability for drinking.
 """)
 
-st.write("\n---\n")
-parameter_info()
+# st.write("\n---\n")
+# parameter_info()
 
 # Set default values to likely safe ranges
 pH = st.number_input("pH (6.5-8.5 is ideal)", min_value=0.0, max_value=14.0, value=7.5, step=0.1)

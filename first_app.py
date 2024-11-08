@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# Load the trained model
+Load the trained model
 with open("rf_model.pkl", "rb") as file:
     rf_model = pickle.load(file)
 

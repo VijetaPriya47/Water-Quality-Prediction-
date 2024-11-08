@@ -52,6 +52,9 @@ st.markdown("""
     **This app** leverages data and machine learning to analyze various water characteristics, helping predict if water is safe for consumption. Each parameter tells us a unique story about water quality, offering valuable insights into water's suitability for drinking.
 """)
 
+st.write("\n---\n")
+parameter_info()
+
 # Set default values to likely safe ranges
 pH = st.number_input("pH (6.5-8.5 is ideal)", min_value=0.0, max_value=14.0, value=7.5, step=0.1)
 hardness = st.number_input("Hardness (mg/L)", min_value=0.0, max_value=500.0, value=120.0, step=1.0)
@@ -70,8 +73,7 @@ if st.button("Check Potability"):
     st.subheader(f"Prediction: {result}")
 
 # Display additional information
-st.write("\n---\n")
-parameter_info()
+
 st.write("\n---\n")
 # Algorithm Section in Streamlit
 st.write("## 🧠 Algorithms: The Powerhouses Behind Water Safety Analysis")
